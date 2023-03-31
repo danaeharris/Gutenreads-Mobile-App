@@ -10,6 +10,7 @@ import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { View } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import { observer } from "mobx-react-lite"
 
 SplashScreen.preventAutoHideAsync();
 
@@ -22,6 +23,7 @@ export type RootStackParamList = {
 const Stack = createStackNavigator<RootStackParamList>();
 
 export default function App() {
+  
   const [fontsLoaded] = useFonts({
     "PP Writer-Bold": require("./assets/fonts/PPWriter-Bold.otf"),
     "PP Writer-Regular": require("./assets/fonts/PPWriter-Regular.otf"),
